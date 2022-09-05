@@ -5,15 +5,21 @@
   } = locals || {}
 %>
 
-<section class="section">
-  <div class="container">
-    <div class="error">
-      <h1 class="title--h1">
-        <%= errorCode %>
-      </h1>
-    </div>
+<div class="error-page">
+  <div class="error-page__code">
+    <h1 class="error-page__code-label">
+      <%= errorCode %>
+    </h1>
   </div>
-</section>
+  <div class="error-page__footer">
+    <a href="/" class="error-page__link">
+      <span class="error-page__link-label">Go to main page</span>
+      <span class="error-page__link-icon">
+        <%- include('./partials/icon', {name: 'arrow'}); %>
+      </span>
+    </a>
+  </div>
+</div>
 
 
 <%- include('./partials/footer'); -%>
