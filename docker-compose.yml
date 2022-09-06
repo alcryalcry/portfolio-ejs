@@ -1,0 +1,8 @@
+version: '3'
+services:
+  mysite:
+    build: .
+    image: thealexcode/mysite
+    container_name: mysite
+    ports:
+      - '3000:80'

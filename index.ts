@@ -8,7 +8,7 @@ import router from './router';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ?? 3000;
 
 app.use(helmet());
 app.use(
@@ -17,7 +17,7 @@ app.use(
     dest: path.join(__dirname, 'static'),
     debug: true,
     outputStyle: 'compressed',
-  })
+  }),
 );
 
 app.use(express.static(path.resolve(__dirname, 'static')));
