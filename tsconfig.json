@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "CommonJS",
     "strict": true,
     "jsx": "preserve",
     "allowJs": true,
@@ -14,18 +14,18 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "outDir": "./build",
+    "outDir": "./dist",
     "lib": [
       "esnext",
     ]
   },
   "include": [
+    "router/**/*.ts",
+    "router/**/*.tsx",
     "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.vue",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue",
   ],
   "exclude": [
     "node_modules"
